@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Mar  2 19:08:02 2025
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : seg7_indicator
+Top-level Entity Name : seg7_indicator
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 457 / 6,272 ( 7 % )
+    Total combinational functions : 338 / 6,272 ( 5 % )
+    Dedicated logic registers : 328 / 6,272 ( 5 % )
+Total registers : 328
+Total pins : 17 / 92 ( 18 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

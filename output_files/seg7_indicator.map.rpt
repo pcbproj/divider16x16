@@ -1,0 +1,480 @@
+Analysis & Synthesis report for seg7_indicator
+Sun Mar  2 19:07:57 2025
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: pgen:pulse_gen
+ 12. Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d0
+ 13. Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d1
+ 14. Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d23
+ 15. Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d23"
+ 16. Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d1"
+ 17. Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d0"
+ 18. Port Connectivity Checks: "segment_7:decoder"
+ 19. Port Connectivity Checks: "pgen:pulse_gen"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Mar  2 19:07:57 2025       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; seg7_indicator                              ;
+; Top-level Entity Name              ; seg7_indicator                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 488                                         ;
+;     Total combinational functions  ; 338                                         ;
+;     Dedicated logic registers      ; 328                                         ;
+; Total registers                    ; 328                                         ;
+; Total pins                         ; 17                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                            ; seg7_indicator     ; seg7_indicator     ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; pgen.vhd                         ; yes             ; User VHDL File  ; D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/pgen.vhd           ;         ;
+; segment_7.vhd                    ; yes             ; User VHDL File  ; D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd      ;         ;
+; divider16x16b.vhd                ; yes             ; User VHDL File  ; D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/divider16x16b.vhd  ;         ;
+; seg7_indicator.vhd               ; yes             ; User VHDL File  ; D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 488       ;
+;                                             ;           ;
+; Total combinational functions               ; 338       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 114       ;
+;     -- 3 input functions                    ; 97        ;
+;     -- <=2 input functions                  ; 127       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 233       ;
+;     -- arithmetic mode                      ; 105       ;
+;                                             ;           ;
+; Total registers                             ; 328       ;
+;     -- Dedicated logic registers            ; 328       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 17        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 308       ;
+; Total fan-out                               ; 2015      ;
+; Average fan-out                             ; 2.88      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name    ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+----------------+--------------+
+; |seg7_indicator               ; 338 (52)            ; 328 (44)                  ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |seg7_indicator                                         ; seg7_indicator ; work         ;
+;    |pgen:pulse_gen|           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |seg7_indicator|pgen:pulse_gen                          ; pgen           ; work         ;
+;    |segment_7:decoder|        ; 285 (49)            ; 281 (29)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |seg7_indicator|segment_7:decoder                       ; segment_7      ; work         ;
+;       |divider16x16b:div_d0|  ; 83 (83)             ; 95 (95)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d0  ; divider16x16b  ; work         ;
+;       |divider16x16b:div_d1|  ; 84 (84)             ; 97 (97)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d1  ; divider16x16b  ; work         ;
+;       |divider16x16b:div_d23| ; 69 (69)             ; 60 (60)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d23 ; divider16x16b  ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------------------+----------------------------------------+
+; Register name                                       ; Reason for Removal                     ;
++-----------------------------------------------------+----------------------------------------+
+; segment_7:decoder|divider16x16b:div_d23|down[0]     ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d23|down[1]     ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d23|down[2]     ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d23|down[3]     ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d23|down[4..15] ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d1|down[0]      ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d1|down[1]      ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d1|down[2]      ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d1|down[3]      ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d1|down[4..15]  ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|down[0]      ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|down[1]      ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|down[2]      ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|down[3]      ; Stuck at VCC due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|down[4..15]  ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|divider16x16b:div_d0|up[14,15]    ; Stuck at GND due to stuck port data_in ;
+; segment_7:decoder|dec[7]                            ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 51              ;                                        ;
++-----------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 328   ;
+; Number of registers using Synchronous Clear  ; 115   ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 160   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d0|b[0]      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d1|b[3]      ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d23|b[2]     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d0|temp[11]  ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d1|temp[6]   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |seg7_indicator|segment_7:decoder|divider16x16b:div_d23|temp[13] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |seg7_indicator|segment_7:decoder|Mux1                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pgen:pulse_gen ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; edge           ; '1'   ; Enumerated                         ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d0 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: segment_7:decoder|divider16x16b:div_d23 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d23"                                                        ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; divider[15..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[3]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[2]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; quotient[15..4]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; remainder[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rd_valid         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d1"                                                         ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; divider[15..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[3]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[2]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; remainder[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "segment_7:decoder|divider16x16b:div_d0"                                                         ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; divider[15..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[3]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[2]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; divider[1]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; divider[0]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; remainder[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "segment_7:decoder"    ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; en             ; Input ; Info     ; Stuck at VCC ;
+; dec_in[15..14] ; Input ; Info     ; Stuck at GND ;
+; dp_in          ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "pgen:pulse_gen" ;
++--------+-------+----------+----------------+
+; Port   ; Type  ; Severity ; Details        ;
++--------+-------+----------+----------------+
+; enable ; Input ; Info     ; Stuck at VCC   ;
++--------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 328                         ;
+;     ENA               ; 142                         ;
+;     ENA SCLR          ; 18                          ;
+;     SCLR              ; 67                          ;
+;     SCLR SLD          ; 30                          ;
+;     plain             ; 71                          ;
+; cycloneiii_lcell_comb ; 339                         ;
+;     arith             ; 105                         ;
+;         2 data inputs ; 105                         ;
+;     normal            ; 234                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 97                          ;
+;         4 data inputs ; 114                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Sun Mar  2 19:07:47 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off seg7_indicator -c seg7_indicator
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pgen.vhd
+    Info (12022): Found design unit 1: pgen-RTL File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/pgen.vhd Line: 29
+    Info (12023): Found entity 1: pgen File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/pgen.vhd Line: 16
+Info (12021): Found 2 design units, including 1 entities, in source file segment_7.vhd
+    Info (12022): Found design unit 1: segment_7-Behavioral File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 27
+    Info (12023): Found entity 1: segment_7 File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file divider16x16b.vhd
+    Info (12022): Found design unit 1: divider16x16b-Behavioral File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/divider16x16b.vhd Line: 22
+    Info (12023): Found entity 1: divider16x16b File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/divider16x16b.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file seg7_indicator.vhd
+    Info (12022): Found design unit 1: seg7_indicator-behave File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd Line: 19
+    Info (12023): Found entity 1: seg7_indicator File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd Line: 9
+Warning (12019): Can't analyze file -- file divider16x16b_out_valid.vhd is missing
+Info (12127): Elaborating entity "seg7_indicator" for the top level hierarchy
+Info (12128): Elaborating entity "pgen" for hierarchy "pgen:pulse_gen" File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd Line: 58
+Info (12128): Elaborating entity "segment_7" for hierarchy "segment_7:decoder" File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd Line: 69
+Warning (10036): Verilog HDL or VHDL warning at segment_7.vhd(58): object "rd2" assigned a value but never read File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at segment_7.vhd(146): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at segment_7.vhd(149): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at segment_7.vhd(171): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 171
+Warning (10492): VHDL Process Statement warning at segment_7.vhd(187): signal "en" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 187
+Info (12128): Elaborating entity "divider16x16b" for hierarchy "segment_7:decoder|divider16x16b:div_d0" File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/segment_7.vhd Line: 66
+Warning (10036): Verilog HDL or VHDL warning at divider16x16b.vhd(23): object "res_temp" assigned a value but never read File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/divider16x16b.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "code_out[7]" is stuck at VCC File: D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/seg7_indicator.vhd Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 505 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 488 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Sun Mar  2 19:07:57 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
+
+

@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Work/PCBteach/01_HomeWork/2024/FPGA/09_2024/Rosin/Fifo/b1_scfifo/b1_scfifo
+Edivider16x16_tb
+Z0 w1740913881
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 79
+Z6 dD:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim
+Z7 8D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16_tb.vhd
+Z8 FD:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16_tb.vhd
+l0
+L7 1
+VK:HlMT7;A<d<h9lXd3]o;2
+!s100 M:3:IlFTk@=BjNg_30]]k3
+Z9 OV;C;2020.1;71
+32
+Z10 !s110 1740913890
+!i10b 1
+Z11 !s108 1740913890.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16_tb.vhd|
+Z13 !s107 D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16_tb.vhd|
+!i113 1
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+R3
+R4
+R5
+Z16 DEx4 work 15 divider16x16_tb 0 22 K:HlMT7;A<d<h9lXd3]o;2
+!i122 79
+l45
+L10 105
+Vb2Nj<=K=Y_VXg6N`kSbC73
+!s100 ]`hD`UfTQRL^bYPBXPaib2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Edivider16x16b
+Z17 w1740913767
+R2
+R3
+R4
+R5
+!i122 78
+R6
+Z18 8D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16b.vhd
+Z19 FD:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16b.vhd
+l0
+L6 1
+ViDEbD_1no`>jnJf`>=9T=3
+!s100 jHec1D[U=:2R16bVQJm;32
+R9
+32
+R10
+!i10b 1
+R11
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16b.vhd|
+Z21 !s107 D:/Work/PCBteach/02_MY_projects/FPGA_Projects/devider16x16/modelsim/divider16x16b.vhd|
+!i113 1
+R14
+R15
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 13 divider16x16b 0 22 iDEbD_1no`>jnJf`>=9T=3
+!i122 78
+l31
+L22 74
+VY<Z5cVA;PD=CKe7iWYZZa0
+!s100 DIb^<1fmRONU3@NCcD@Ml0
+R9
+32
+R10
+!i10b 1
+R11
+R20
+R21
+!i113 1
+R14
+R15
